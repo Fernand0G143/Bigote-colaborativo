@@ -1,4 +1,6 @@
-
+.cara{
+    position: relative;
+}
 .bigote {
 width: 180px;
 height: 180px;
@@ -36,4 +38,55 @@ box-shadow:
     border-radius: 0 0 100% 0;
     transform: rotate(40deg);
     transform-origin: left 210px;;
+}
+.mono{
+    position:absolute;
+    width:300px;   
+    height:80px;   
+    transform: translate(80px, 600px);
+}
+.centro{
+    position:absolute;
+    width:50px;     
+    height:80px;    
+    left:320px;     
+    top:30px;          
+    border-radius:8px;
+    background-color:#062f2f;
+    z-index:10;        
+}
+.lado{
+    position:absolute;
+}
+.lado::before,
+.lado::after{
+    content:"";
+    position:absolute;
+    width:0;
+    height:0;
+    border-style:solid;
+}
+.izquierdo{
+    left:200px;
+}
+.izquierdo::before{
+    border-width:0 160px 70px 35px;
+    border-color:transparent transparent #0e5c5c transparent;
+}
+.izquierdo::after{
+    border-width:70px 160px 0px 35px;
+    border-color:#0b4c4c transparent transparent transparent;
+    top:70px;
+}
+.derecho{
+    right:0px;
+}
+.derecho::before{
+    border-width:0px 35px 70px 160px;
+    border-color:transparent transparent #0e5c5c transparent;
+}
+.derecho::after{
+    border-width:70px 35px 0px 160px;
+    border-color:#0b4c4c transparent transparent transparent;
+    top:70px;
 }
