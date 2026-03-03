@@ -1,16 +1,17 @@
 .cara{
     position: relative;
 }
+
 .bigote {
-width: 180px;
-height: 180px;
-left: 100px;
-border-radius: 50%;
-position: absolute;
-color:black;
-box-shadow:
-150px 240px 0 0 currentColor,
-300px 240px 0 0 currentColor;
+    width: 180px;
+    height: 180px;
+    left: 100px;
+    border-radius: 50%;
+    position: absolute;
+    color:black;
+    box-shadow:
+    150px 240px 0 0 currentColor,
+    300px 240px 0 0 currentColor;
 }
 
 .bigote::before {
@@ -23,9 +24,8 @@ box-shadow:
     border-bottom: solid 180px currentColor;
     border-radius: 0 0 0 100%;
     transform: rotate(-40deg);
-    transform-origin: right 210px;;
+    transform-origin: right 210px;
 }
-
 
 .bigote::after{
     content: "";
@@ -37,14 +37,16 @@ box-shadow:
     border-bottom: solid 180px currentColor;
     border-radius: 0 0 100% 0;
     transform: rotate(40deg);
-    transform-origin: left 210px;;
+    transform-origin: left 210px;
 }
+
 .mono{
     position:absolute;
     width:300px;   
     height:80px;   
     transform: translate(80px, 600px);
 }
+
 .centro{
     position:absolute;
     width:50px;     
@@ -55,9 +57,11 @@ box-shadow:
     background-color:#062f2f;
     z-index:10;        
 }
+
 .lado{
     position:absolute;
 }
+
 .lado::before,
 .lado::after{
     content:"";
@@ -66,27 +70,71 @@ box-shadow:
     height:0;
     border-style:solid;
 }
+
 .izquierdo{
     left:200px;
 }
+
 .izquierdo::before{
     border-width:0 160px 70px 35px;
     border-color:transparent transparent #0e5c5c transparent;
 }
+
 .izquierdo::after{
     border-width:70px 160px 0px 35px;
     border-color:#0b4c4c transparent transparent transparent;
     top:70px;
 }
+
 .derecho{
     right:0px;
 }
+
 .derecho::before{
     border-width:0px 35px 70px 160px;
     border-color:transparent transparent #0e5c5c transparent;
 }
+
 .derecho::after{
     border-width:70px 35px 0px 160px;
     border-color:#0b4c4c transparent transparent transparent;
     top:70px;
+}
+
+/* 👅 LENGUA */
+.lengua{
+    position:absolute;
+    width:40px;
+    height:60px;
+    background:linear-gradient(to bottom,#ff4d6d,#ff758f);
+    border-radius:50%;
+    left:50%;
+    bottom:-40px;
+    transform:translateX(-50%);
+    z-index:5;
+    animation:moverLengua 1.5s infinite ease-in-out;
+}
+
+.lengua::after{
+    content:"";
+    position:absolute;
+    width:3px;
+    height:40px;
+    background:#cc2f52;
+    left:50%;
+    top:10px;
+    transform:translateX(-50%);
+    border-radius:10px;
+}
+
+@keyframes moverLengua{
+    0%{
+        transform:translateX(-50%) translateY(0);
+    }
+    50%{
+        transform:translateX(-50%) translateY(10px);
+    }
+    100%{
+        transform:translateX(-50%) translateY(0);
+    }
 }
