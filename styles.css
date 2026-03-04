@@ -141,8 +141,8 @@
 
 .sombrero {
     position: absolute;
-    top: 30px;
-    left: 28%;
+    top: 20px;
+    left: 100%;
     transform: translateX(-50%);
 }
 
@@ -172,5 +172,36 @@
     bottom: -15px;
     left: 50%;
     transform: translateX(-50%);
+}
+/* 👀 OJOS */
+.ojo{
+    position:absolute;
+    width:90px;
+    height:90px;
+    background:white;
+    border-radius:50%;
+    top:150px;   /* Ajusta según tu diseño */
+    z-index:5;
+}
+
+.ojo::after{
+    content:"";
+    position:absolute;
+    width:40px;
+    height:40px;
+    background:black;
+    border-radius:50%;
+    top:25px;
+    left:25px;
+}
+
+/* Ojo izquierdo */
+.ojo.izq{
+    left:280px;   /* Ajusta posición */
+}
+
+/* Ojo derecho */
+.ojo.der{
+    left:450px;   /* Ajusta posición */
 }
     
